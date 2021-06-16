@@ -5,8 +5,8 @@ const app = express();
 const routes = require('./router');
 
 // Define the hostname and port where the server can be found
-const hostname = "127.0.0.1";
-const port = 3000;
+const hostname = "genz-ipsum.herokuapp.com";
+// const port = 3000;
 
 // Define the directory where static files are found
 app.use(express.static('public'));
@@ -17,5 +17,6 @@ app.use(routes);
 // Begin accepting connections to the specified port
 app.listen(port, () => {
   // Display server location information to the console
-  console.log(`Server is listening at http://${hostname}:${port}/`);
+  console.log(`Server is listening at http://${hostname}`);
+//   console.log(`Server is listening at http://${hostname}:${port}/`);
 })

@@ -15,7 +15,7 @@ app.use(express.static('public'));
 app.use(routes);
 
 // Begin accepting connections to the specified port
-app.listen(port, () => {
+app.listen( () => {
   // Display server location information to the console
   console.log(`Server is listening at http://${hostname}`);
 //   console.log(`Server is listening at http://${hostname}:${port}/`);

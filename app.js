@@ -31,7 +31,6 @@ const routes = require('./router');
 
 // Define the hostname and port where the server can be found
 const hostname = process.env.APP_DOMAIN || "127.0.0.1";
-const port = process.env.APP_PORT || 3000;
 
 // Define the directory where static files are found
 app.use(express.static('public'));
@@ -40,7 +39,7 @@ app.use(express.static('public'));
 app.use(routes);
 
 // Begin accepting connections to the specified port
-app.listen(port, () => {
+app.listen(process.env.PORT || 3000, () => {
   // Display server location information to the console
-  console.log(`Server is listening at http://${hostname}:${port}/`);
+  console.log(`Server is listening at http://${hostname}/`);
 })

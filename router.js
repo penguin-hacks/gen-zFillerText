@@ -30,7 +30,7 @@ router.post('/', (request, response) => {
     // Capture the contents of index.html in a variable
     let fileContents = fs.readFileSync("./public/index.html", {encoding: "utf8"});
     // Replace the placeholder <div> with the lorem ipsum text
-    fileContents = fileContents.replace("<div class='placeholder-div'></div>",`<textarea class="show-text" onclick="this.select(); document.execCommand('copy'); $('.whyNoPeriods').show();">${loremIpsumText}</textarea>`);;
+    fileContents = fileContents.replace("<div class='placeholder-div'></div>",`<textarea class="show-text" onclick="this.select(); document.execCommand('copy');">${loremIpsumText}</textarea> <p>Where are the periods you ask? First of all, you are a boomer (L). Second of all, us gamers are pog and don't use periods.</p>`);
     response.setHeader('Content-Type', 'text/html');
     // Send a response to the client with the modified index.html file
     response.write(fileContents);
